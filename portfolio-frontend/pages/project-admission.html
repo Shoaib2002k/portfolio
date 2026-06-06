@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Management System | Mohammed Shoaib S</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Back to Home Button - Top Left -->
+<a href="index.html" class="back-home-btn">
+    <i class="fas fa-arrow-left"></i>
+    <span>Back to Home</span>
+</a>
+    <div id="navigation-container"></div>
+
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container-custom">
+            <a href="projects.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+
+            <!-- Header -->
+            <div class="project-header project-header-admission">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="project-header-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div>
+                        <h1>Admission Management System</h1>
+                        <div>
+                            <span class="project-header-badge">Full Stack</span>
+                            <span class="project-header-badge">Node.js</span>
+                            <span class="project-header-badge">CRUD Application</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <div class="project-detail-card">
+                        <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            The Admission Management System is a full-stack CRUD web application designed to digitize the student 
+                            admission process. This system replaced traditional spreadsheets, reducing errors by 80% and streamlining 
+                            the entire admission workflow.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Features a responsive frontend with comprehensive form validation and secure MySQL backend using PHP 
+                            prepared statements to prevent SQL injection attacks.
+                        </p>
+                    </div>
+
+                    <div class="project-detail-card">
+                        <h2><i class="fas fa-star"></i> Key Features</h2>
+                        <div class="features-grid">
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i> Complete CRUD for student records</li>
+                                <li><i class="fas fa-check-circle"></i> Responsive frontend with validation</li>
+                                <li><i class="fas fa-check-circle"></i> PHP prepared statements for security</li>
+                            </ul>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i> Optimized indexed database queries</li>
+                                <li><i class="fas fa-check-circle"></i> Search for 1000+ entries</li>
+                                <li><i class="fas fa-check-circle"></i> Role-based access control</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-detail-card">
+                        <h2><i class="fas fa-shield-alt"></i> Security Features</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <h3>Prepared Statements</h3>
+                                <p class="text-gray-600 text-sm">PHP prepared statements prevent SQL injection attacks.</p>
+                            </div>
+                            <div>
+                                <h3>Data Validation</h3>
+                                <p class="text-gray-600 text-sm">Client-side and server-side validation for data integrity.</p>
+                            </div>
+                            <div>
+                                <h3>Secure Authentication</h3>
+                                <p class="text-gray-600 text-sm">Role-based access for different user types.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-cubes"></i> Tech Stack</h3>
+                        <div>
+                            <span class="detail-tech-tag">HTML/CSS</span>
+                            <span class="detail-tech-tag">PHP</span>
+                            <span class="detail-tech-tag">MySQL</span>
+                            <span class="detail-tech-tag">CRUD</span>
+                            <span class="detail-tech-tag">Prepared Statements</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-link"></i> Project Links</h3>
+                        <div class="project-links-list">
+                            <a href="#" class="project-link-item">
+                                <i class="fab fa-github"></i> View Source Code
+                            </a>
+                            <a href="#" class="project-link-item">
+                                <i class="fas fa-eye"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="impact-stats blue">
+                        <div class="impact-number">80%</div>
+                        <div class="impact-label">Reduction in manual errors</div>
+                        <hr class="impact-divider">
+                        <div class="impact-number">3x</div>
+                        <div class="impact-label">Faster record retrieval</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-custom">
+            <p>&copy; 2024 Mohammed Shoaib S - Junior Frontend Developer</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>

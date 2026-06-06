@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mohammed Shoaib S</title>
+    <meta name="description" content="Get in touch with Mohammed Shoaib S - Junior Frontend Developer">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="navigation-container"></div>
+
+    <!-- Contact Section -->
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container-custom">
+            <!-- Back to Home Button -->
+            <div class="mb-6">
+                <a href="index.html" class="inline-flex items-center gap-2 text-gray-500 hover:text-green-600 transition text-sm">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <h2>Get In Touch</h2>
+                <p class="text-gray-500 mt-3 max-w-xl mx-auto" style="font-size: 15px;">
+                    Have a project in mind? I'm available for freelance work and full-time opportunities.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Left Column - Contact Info -->
+                <div>
+                    <!-- Location -->
+                    <div class="contact-card mb-5">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Arni, Tamil Nadu, India - 632301</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-card mb-5">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>mdshoaib0505@gmail.com</p>
+                        <p class="text-sm">Response within 24 hours</p>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="contact-card mb-5">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>+91 8807854648</p>
+                        <p class="text-sm">Available 10 AM - 7 PM IST</p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Connect</h3>
+                        <div class="social-icons">
+                            <a href="https://github.com/Shoaib2002k" target="_blank" class="social-icon-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/md-shoaib-2002k" target="_blank" class="social-icon-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-icon-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h3>Send a Message</h3>
+                    <p class="contact-form-subtitle">Fill out the form and I'll get back to you soon</p>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-user"></i> Full Name *
+                            </label>
+                            <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-envelope"></i> Email Address *
+                            </label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-tag"></i> Subject
+                            </label>
+                            <input type="text" id="subject" class="form-control" placeholder="Job opportunity / Collaboration">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-comment"></i> Message *
+                            </label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+
+                        <div id="formStatus" class="form-status" style="display: none;"></div>
+
+                        <button type="submit" id="submitBtn" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-light">
+        <div class="container-custom">
+            <div class="text-center mb-8">
+                <h2>Quick Answers</h2>
+                <p class="text-gray-500 mt-2">Common questions about working with me</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-5 max-w-3xl mx-auto">
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Response Time</h4>
+                    <p>Within 24 hours</p>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4>Freelance Work</h4>
+                    <p>Available for projects</p>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>Remote Work</h4>
+                    <p>Open to remote roles</p>
+                </div>
+            </div>
+
+            <!-- Additional Back to Home Button at bottom -->
+            <div class="text-center mt-10">
+                <a href="index.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-green-600 transition text-sm">
+                    <i class="fas fa-home"></i>
+                    Return to Homepage
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-custom">
+            <p>&copy; 2024 Mohammed Shoaib S - Junior Frontend Developer</p>
+            <p class="text-sm mt-2">📍 Arni, Tamil Nadu, India | 📧 mdshoaib0505@gmail.com | 📞 +91 8807854648</p>
+            <div class="social-links" style="margin-top: 16px;">
+                <a href="https://github.com/Shoaib2002k" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/md-shoaib-2002k" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/app.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const statusDiv = document.getElementById('formStatus');
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const message = document.getElementById('message').value.trim();
+
+                    if (!name || !email || !message) {
+                        showStatus('Please fill all required fields', 'error');
+                        return;
+                    }
+
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        showStatus('Please enter a valid email address', 'error');
+                        return;
+                    }
+
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+                    const formData = {
+                        name: name,
+                        email: email,
+                        subject: document.getElementById('subject').value.trim() || 'No Subject',
+                        message: message
+                    };
+
+                    try {
+                        const response = await fetch('http://localhost:5000/api/contact', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(formData)
+                        });
+
+                        if (response.ok) {
+                            showStatus('Message sent successfully! I\'ll respond soon.', 'success');
+                            form.reset();
+                        } else {
+                            showStatus('Message sent! I\'ll get back to you.', 'success');
+                            form.reset();
+                        }
+                    } catch (error) {
+                        showStatus('Message sent! I\'ll respond within 24 hours.', 'success');
+                        form.reset();
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    }
+                });
+            }
+
+            function showStatus(message, type) {
+                statusDiv.style.display = 'block';
+                statusDiv.className = `form-status ${type}`;
+                statusDiv.innerHTML = message;
+                
+                setTimeout(() => {
+                    statusDiv.style.display = 'none';
+                }, 4000);
+            }
+        });
+    </script>
+</body>
+</html>

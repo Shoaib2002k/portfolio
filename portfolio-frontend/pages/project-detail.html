@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Mohammed Shoaib S</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="navigation-container"></div>
+
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container-custom">
+            <div id="project-content">
+                <!-- Dynamic content loads here -->
+                <div class="text-center py-12">
+                    <i class="fas fa-spinner fa-spin text-3xl text-green-600"></i>
+                    <p class="mt-4 text-gray-600">Loading project details...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-custom">
+            <p>&copy; 2024 Mohammed Shoaib S - Junior Frontend Developer</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/app.js"></script>
+    
+    <script>
+        // Get project ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+
+        // Project data
+        const projects = {
+            1: {
+                title: "Alumni Portal",
+                icon: "fas fa-users",
+                color: "green",
+                gradient: "from-green-100 to-green-50",
+                headerBg: "project-header-alumni",
+                overview: "The Alumni Portal is a comprehensive CRUD web application designed to digitize student admission records, fee tracking, and document verification processes. This system replaced traditional spreadsheets, reducing manual errors by 80% and improving overall efficiency.",
+                features: [
+                    "Complete CRUD operations for student records",
+                    "Fee tracking and payment management",
+                    "Document verification workflow",
+                    "JavaScript form validation for data integrity",
+                    "Optimized MySQL database with indexed tables",
+                    "Search functionality for 1000+ student entries"
+                ],
+                techStack: ["HTML5", "CSS3", "JavaScript", "MySQL", "CRUD"],
+                impact1: "80%",
+                impact1Label: "Reduction in manual errors",
+                impact2: "3x",
+                impact2Label: "Faster record retrieval"
+            },
+            2: {
+                title: "Admission Management System",
+                icon: "fas fa-school",
+                color: "blue",
+                gradient: "from-blue-100 to-blue-50",
+                headerBg: "project-header-admission",
+                overview: "The Admission Management System is a full-stack CRUD web application designed to digitize the student admission process. This system replaced traditional spreadsheets, reducing errors by 80% and streamlining the entire admission workflow.",
+                features: [
+                    "Complete CRUD operations for student records",
+                    "Responsive frontend with comprehensive form validation",
+                    "PHP prepared statements for SQL security",
+                    "Optimized database schema with indexed queries",
+                    "Search functionality for 1000+ entries",
+                    "Role-based access control"
+                ],
+                techStack: ["HTML/CSS", "PHP", "MySQL", "CRUD", "Prepared Statements"],
+                impact1: "80%",
+                impact1Label: "Reduction in manual errors",
+                impact2: "3x",
+                impact2Label: "Faster record retrieval"
+            },
+            3: {
+                title: "Premium Calculator Pro",
+                icon: "fas fa-calculator",
+                color: "purple",
+                gradient: "from-purple-100 to-purple-50",
+                headerBg: "project-header-calculator",
+                overview: "Premium Calculator Pro is a modern, responsive calculator web application with calculation history tracking. Built with Vanilla JavaScript, it features a glassmorphism UI design and provides a seamless user experience across all devices.",
+                features: [
+                    "Basic arithmetic operations (+, -, ×, ÷)",
+                    "Calculation history with localStorage persistence",
+                    "Glassmorphism UI design with CSS Flexbox/Grid",
+                    "100% mobile responsive design",
+                    "Event delegation for efficient event handling",
+                    "Deployed on Netlify with CI/CD from GitHub"
+                ],
+                techStack: ["HTML5", "CSS3", "Vanilla JS", "LocalStorage", "CSS Flexbox/Grid", "Netlify"],
+                impact1: "100%",
+                impact1Label: "Mobile Responsive",
+                impact2: "History",
+                impact2Label: "Persistent calculation history"
+            }
+        };
+
+        // Load project data
+        function loadProject() {
+            const project = projects[projectId];
+            const container = document.getElementById('project-content');
+            
+            if (!project) {
+                container.innerHTML = `
+                    <div class="text-center py-12">
+                        <i class="fas fa-exclamation-circle text-5xl text-red-500 mb-4"></i>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">Project Not Found</h2>
+                        <p class="text-gray-600 mb-6">The project you're looking for doesn't exist.</p>
+                        <a href="projects.html" class="btn btn-primary">Back to Projects</a>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = `
+                <!-- Back Button -->
+                <div class="mb-6">
+                    <a href="projects.html" class="inline-flex items-center gap-2 text-gray-500 hover:text-green-600 transition text-sm">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Projects
+                    </a>
+                </div>
+
+                <!-- Project Header -->
+                <div class="rounded-2xl p-8 mb-8 ${project.headerBg}">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                            <i class="${project.icon} text-3xl text-white"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-3xl font-bold text-white mb-1">${project.title}</h1>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white/20 text-white px-3 py-1 rounded-full text-xs">Featured Project</span>
+                                <span class="bg-white/20 text-white px-3 py-1 rounded-full text-xs">Full Stack</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Main Content -->
+                    <div class="md:col-span-2">
+                        <div class="bg-white rounded-xl border border-gray-100 p-6 mb-6 shadow-sm">
+                            <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                                <i class="fas fa-info-circle text-green-600"></i>
+                                Project Overview
+                            </h2>
+                            <p class="text-gray-600 leading-relaxed">${project.overview}</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl border border-gray-100 p-6 mb-6 shadow-sm">
+                            <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                                <i class="fas fa-star text-green-600"></i>
+                                Key Features
+                            </h2>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <ul class="space-y-3">
+                                    ${project.features.slice(0, 3).map(f => `
+                                        <li class="flex items-start gap-3">
+                                            <i class="fas fa-check-circle text-green-600 mt-1 text-sm"></i>
+                                            <span class="text-gray-600 text-sm">${f}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                                <ul class="space-y-3">
+                                    ${project.features.slice(3, 6).map(f => `
+                                        <li class="flex items-start gap-3">
+                                            <i class="fas fa-check-circle text-green-600 mt-1 text-sm"></i>
+                                            <span class="text-gray-600 text-sm">${f}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div>
+                        <div class="bg-white rounded-xl border border-gray-100 p-6 mb-6 shadow-sm">
+                            <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                                <i class="fas fa-cubes text-green-600"></i>
+                                Tech Stack
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                ${project.techStack.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl border border-gray-100 p-6 mb-6 shadow-sm">
+                            <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                                <i class="fas fa-link text-green-600"></i>
+                                Project Links
+                            </h3>
+                            <div class="space-y-3">
+                                <a href="#" class="flex items-center gap-3 text-green-600 hover:text-green-700">
+                                    <i class="fab fa-github text-xl"></i>
+                                    <span>View Source Code</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 text-green-600 hover:text-green-700">
+                                    <i class="fas fa-eye text-xl"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="rounded-xl p-6 text-center ${project.color === 'green' ? 'bg-green-50' : project.color === 'blue' ? 'bg-blue-50' : 'bg-purple-50'}">
+                            <div class="text-3xl font-bold ${project.color === 'green' ? 'text-green-600' : project.color === 'blue' ? 'text-blue-600' : 'text-purple-600'} mb-1">${project.impact1}</div>
+                            <div class="text-sm text-gray-600 mb-3">${project.impact1Label}</div>
+                            <hr class="my-3 border-gray-200">
+                            <div class="text-3xl font-bold ${project.color === 'green' ? 'text-green-600' : project.color === 'blue' ? 'text-blue-600' : 'text-purple-600'} mb-1">${project.impact2}</div>
+                            <div class="text-sm text-gray-600">${project.impact2Label}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        loadProject();
+    </script>
+</body>
+</html>
